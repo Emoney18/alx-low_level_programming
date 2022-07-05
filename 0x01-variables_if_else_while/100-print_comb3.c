@@ -5,8 +5,10 @@
 *
 * Return: Always (Success)
 */
+
 int main(void)
 {
+
 	int c, i;
 
 	for (c = '0'; c <= '9'; c++)
@@ -19,5 +21,15 @@ int main(void)
 				putchar(i);
 
 				if (c != '8' || (c == '8' && i != '9'))
-				}											putchar(',')
-						purchar(' ')
+				{
+																						putchar(',');
+					putchar(' ');
+																					}
+			}
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
+}
