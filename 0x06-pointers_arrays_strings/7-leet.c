@@ -1,25 +1,28 @@
-#include "holberton.h"
-/**
- * leet - replaces a bunch of numbers with letters
- *
- * @z: the string to look at
- *
- * Return: the new string
- */
+#include "main.h"
 
-char *leet(char *z)
+/**
+ * leet - encodes a string in 1337
+ * @s: string to be encoded
+ *
+ * Return: the resulting string;
+ */
+char *leet(char *s)
 {
-	char arr[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	char replace[] = {'4', '3', '0', '7', '1'};
 	int i, j;
 
-	for (i = 0; z[i] != '\0'; i++)
+	char *a = "aAeEoOtTlL";
+	char *b = "4433007711";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; arr[j] != '\0'; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if (z[i] == arr[j])
-				z[i] = replace[j / 2];
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+			}
 		}
 	}
-	return (z);
+
+	return (s);
 }
